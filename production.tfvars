@@ -1,4 +1,4 @@
-project = "talant-gke-project"
+project = "talantzon"
 region = "us-central1"
 
 general_purpose_machine_type = "n1-standard-1"
