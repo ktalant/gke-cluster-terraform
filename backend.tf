@@ -2,7 +2,7 @@ terraform {
   backend "gcs" {
     bucket = "terraform-gke-talantzon"
     prefix = "terraform"
-    credentials = "talantzon-account.json"
+    credentials = "${file("talantzon-account.json")}"
   }
 }
 
