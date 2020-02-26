@@ -24,3 +24,9 @@ variable "general_purpose_max_node_count" {
   description = "The maximum number of nodes PER ZONE in the general-purpose node pool"
   default = 3
 }
+
+variable "google_bucket_name" {
+  type = "string"
+  default = "talant-la-bucket-123"
+}
+
