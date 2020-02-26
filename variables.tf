@@ -22,5 +22,5 @@ variable "general_purpose_min_node_count" {
 variable "general_purpose_max_node_count" {
   type = "string"
   description = "The maximum number of nodes PER ZONE in the general-purpose node pool"
-  default = 5
+  default = 3
 }
