@@ -7,7 +7,7 @@ terraform {
 }
 
 provider "google" {
-  credentials = "${file("`pwd`/../talant-account.json")}"
+  credentials = "${file("talant-account.json")}"
   project     = "${var.project}"
   region      = "${var.region}"
 }
