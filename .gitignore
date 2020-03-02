@@ -9,4 +9,4 @@
 *.tfvars
 
 # account file
-*account.json
+*account*.json
