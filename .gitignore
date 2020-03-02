@@ -9,5 +9,4 @@
 *.tfvars
 
 # account file
-
 *account.json
