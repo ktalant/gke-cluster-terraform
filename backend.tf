@@ -2,12 +2,12 @@ terraform {
   backend "gcs" {
     bucket = "talant-bucket21"
     prefix = "terraform"
-    credentials = "uchkunfan-account.json"
+    credentials = "talant-account.json"
   }
 }
 
 provider "google" {
-  credentials = "${file("uchkunfan-account.json")}"
+  credentials = "${file("talant-account.json")}"
   project     = "${var.project}"
   region      = "${var.region}"
 }
