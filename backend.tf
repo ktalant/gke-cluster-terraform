@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "talant-bucket21"
+    bucket = "talant-bucket2122"
     prefix = "terraform"
     credentials = "talant-account.json"
   }
