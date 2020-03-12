@@ -1,4 +1,4 @@
-project = "playground-s-11-8522ab"
+project = "playground-s-11-360c17"
 region = "us-central1"
 google_bucket_name = "talant-bucket-23212"
 
