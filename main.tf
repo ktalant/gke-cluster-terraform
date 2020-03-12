@@ -1,4 +1,4 @@
-resource "google_container_cluster" "cluster" {
+resource "google_container_cluster" "talant_cluster" {
   name     = "${var.project}-cluster"
   location = "${var.region}"
 
@@ -29,7 +29,7 @@ resource "google_container_cluster" "cluster" {
 resource "google_container_node_pool" "general_purpose" {
   name       = "${var.project}-general"
   location   = "${var.region}"
-  cluster    = "${google_container_cluster.cluster.name}"
+  cluster    = "${google_container_cluster.talant_cluster.name}"
 
   management { 
     auto_repair = "true"
