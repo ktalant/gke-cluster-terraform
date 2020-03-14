@@ -1,5 +1,5 @@
 resource "google_dns_managed_zone" "talant_dns" {
-  name     = "hrczom"
-  dns_name = "hrczom.com."
+  name     = "hrc1zom"
+  dns_name = "hrc1zom.com."
   project  = "${var.project}"
 }
