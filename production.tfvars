@@ -1,6 +1,6 @@
-project = "playground-s-11-c279ed"
+project = "talantzon"
 region = "us-central1"
-google_bucket_name = "talant-buckett"
+google_bucket_name = "talant-buckettt"
 
 general_purpose_machine_type = "n1-standard-1"
 general_purpose_min_node_count = 1
