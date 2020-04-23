@@ -27,6 +27,5 @@ variable "general_purpose_max_node_count" {
 
 variable "google_bucket_name" {
   type = "string"
-  default = "talant-la-bucket-123"
+  default = "talant-bucket12"
 }
-
