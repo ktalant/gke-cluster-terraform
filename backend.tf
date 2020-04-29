@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "playground-s-11-87108b"
+    bucket = "talantbek"
     prefix = "terraform"
     credentials = "key.json"
   }
