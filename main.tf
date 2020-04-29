@@ -1,6 +1,6 @@
 resource "google_container_cluster" "talant_cluster" {
   name     = "${var.project}-cluster"
-  location = "${var.region}"
+  location = var.region
 
   # We can't create a cluster with no node pool defined, but we want to only use
   # separately managed node pools. So we create the smallest possible default
@@ -27,9 +27,9 @@ resource "google_container_cluster" "talant_cluster" {
 }
 
 resource "google_container_node_pool" "general_purpose" {
-  name       = "${var.project}-general"
-  location   = "${var.region}"
-  cluster    = "${google_container_cluster.talant_cluster.name}"
+  name       = "${var.project}-node-pool"
+  location   = var.region
+  cluster    = google_container_cluster.talant_cluster.name
 
   management { 
     auto_repair = "true"
@@ -37,13 +37,13 @@ resource "google_container_node_pool" "general_purpose" {
   }
 
   autoscaling { 
-    min_node_count = "${var.general_purpose_min_node_count}"
-    max_node_count = "${var.general_purpose_max_node_count}"
+    min_node_count = var.general_purpose_min_node_count
+    max_node_count = var.general_purpose_max_node_count
   }
-  initial_node_count = "${var.general_purpose_min_node_count}"
+  initial_node_count = var.general_purpose_min_node_count
 
   node_config {
-    machine_type = "${var.general_purpose_machine_type}"
+    machine_type = var.general_purpose_machine_type
 
     metadata = {
       disable-legacy-endpoints = "true"

@@ -1,31 +1,31 @@
 variable "project" {
-  type = "string"
+  type = string
   description = "Google Cloud project name"
 }
 
 variable "region" {
-  type = "string"
+  type = string
   description = "Default Google Cloud region"
 }
 
 variable "general_purpose_machine_type" {
-  type = "string"
+  type = string
   description = "Machine type to use for the general-purpose node pool. See https://cloud.google.com/compute/docs/machine-types"
 }
 
 variable "general_purpose_min_node_count" {
-  type = "string"
+  type = string
   description = "The minimum number of nodes PER ZONE in the general-purpose node pool"
   default = 1
 }
 
 variable "general_purpose_max_node_count" {
-  type = "string"
+  type = string
   description = "The maximum number of nodes PER ZONE in the general-purpose node pool"
   default = 3
 }
 
 variable "google_bucket_name" {
-  type = "string"
+  type = string
   default = "talant-bucket12"
 }
